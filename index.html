@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan David Torres C. — Desarrollador de Software</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>💻</text></svg>">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">JDTC <span>— Portfolio</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menú">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#perfil">Perfil</a></li>
+      <li><a href="#educacion">Educación</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <h1>Juan David Torres C.</h1>
+    <p class="subtitle">Desarrollador de Software · Químico</p>
+    <div class="contact-links">
+      <a href="mailto:Juandavidtc3106@gmail.com">
+        <span class="icon">✉</span> Juandavidtc3106@gmail.com
+      </a>
+      <a href="tel:3026306469">
+        <span class="icon">📞</span> 302 630 6469
+      </a>
+      <a href="https://wa.me/573244985462" target="_blank">
+        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H8l-4 2 1.5-4.5A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 11h.01"/><path d="M12 11h.01"/><path d="M15 11h.01"/></svg></span> 324 498 5462
+      </a>
+      <a href="https://www.linkedin.com/in/juan-david-torres-caceres-b08489202/" target="_blank">
+        <span class="icon">🔗</span> LinkedIn
+      </a>
+      <a href="https://github.com/juan310619" target="_blank">
+        <span class="icon">🐙</span> GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- Perfil Profesional -->
+  <section id="perfil" class="section">
+    <h2 class="section-title">Perfil Profesional</h2>
+    <p class="profile-text">
+      Profesional en formación en desarrollo de software con enfoque autodidacta. Mi interés por la
+      programación surgió durante mi experiencia en química computacional, donde desarrollé scripts en Python
+      para automatizar el análisis de datos y optimizar procesos. Actualmente curso un técnico en programación
+      de software y he creado aplicaciones web full-stack como proyectos personales, integrando backend,
+      frontend y bases de datos. Busco mi primera experiencia profesional como desarrollador para seguir
+      creciendo en el área y aportar soluciones eficientes.
+    </p>
+  </section>
+
+  <!-- Educación -->
+  <section id="educacion" class="section">
+    <h2 class="section-title">Educación</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Técnico en Programación de Software</h3>
+        <div class="meta">Servicio Nacional de Aprendizaje (SENA) · Septiembre 2025 — Actualidad</div>
+        <p>
+          Formación técnica en desarrollo de software con énfasis en análisis, diseño, implementación y
+          mantenimiento de sistemas informáticos. Metodología práctica basada en proyectos.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h3>Químico</h3>
+        <div class="meta">Universidad de Cartagena · Febrero 2018 — Septiembre 2023</div>
+        <p>
+          Profesional en Química con formación en química computacional, análisis de datos científicos y
+          metodologías de investigación. Tesis enfocada en simulación molecular y procesamiento automatizado
+          de resultados.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos Personales -->
+  <section id="proyectos" class="section">
+    <h2 class="section-title">Proyectos Personales</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="imagenes/gestor3.webp" alt="Gestor de Tareas" class="card-img" loading="lazy">
+        <div class="card-body">
+          <h3>Gestor de Tareas</h3>
+          <div class="date">Enero 2026 — Junio 2026</div>
+          <p>
+            Aplicación web full-stack para gestión de tareas con tablero estilo Kanban.
+            Incluye autenticación JWT, CRUD de proyectos y tareas, filtros y búsqueda,
+            arrastrar y soltar, carga de imágenes, recuperación de contraseña y
+            despliegue en la nube.
+          </p>
+          <div class="tech-stack">
+            <span>Python</span><span>FastAPI</span><span>TypeScript</span>
+            <span>React</span><span>Vite</span><span>SQLModel</span>
+            <span>PostgreSQL</span><span>MySQL</span>
+          </div>
+          <div class="card-links">
+            <a href="gestor-tareas.html" class="btn-primary">Ver detalle</a>
+            <a href="https://github.com/juan310619/Gestor_de_tareas" target="_blank" class="btn-outline">Repositorio</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="imagenes/turiscol1.webp" alt="TurisCol" class="card-img" loading="lazy">
+        <div class="card-body">
+          <h3>TurisCol — Planificador de Viajes</h3>
+          <div class="date">2025 — 2026</div>
+          <p>
+            Aplicación web full-stack para planificación de viajes turísticos en Colombia.
+            Permite explorar destinos por departamento, crear itinerarios personalizados,
+            gestionar reservas, enviar sugerencias y administrar contenido con roles
+            de usuario y administrador.
+          </p>
+          <div class="tech-stack">
+            <span>JavaScript</span><span>Node.js</span><span>Express</span>
+            <span>HTML/CSS</span><span>Materialize</span><span>SQLite</span>
+            <span>JWT</span><span>Jest</span>
+          </div>
+          <div class="card-links">
+            <a href="turiscol.html" class="btn-primary">Ver detalle</a>
+            <a href="https://github.com/juan310619/Tursicol" target="_blank" class="btn-outline">Repositorio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Habilidades Técnicas -->
+  <section id="habilidades" class="section">
+    <h2 class="section-title">Habilidades Técnicas</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Lenguajes</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">Java (básico)</span>
+          <span class="skill-tag">C++ (básico)</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Backend</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Express.js</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">SQLModel</span>
+          <span class="skill-tag">SQLAlchemy</span>
+          <span class="skill-tag">Alembic</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Frontend</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Vite</span>
+          <span class="skill-tag">Materialize CSS</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Bases de Datos</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">SQLite</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">PostgreSQL</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Herramientas</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Uvicorn</span>
+          <span class="skill-tag">Postman</span>
+          <span class="skill-tag">Jest</span>
+          <span class="skill-tag">Pillow</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Seguridad & DevOps</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">JWT</span>
+          <span class="skill-tag">Rate Limiting</span>
+          <span class="skill-tag">Migraciones</span>
+          <span class="skill-tag">Render</span>
+          <span class="skill-tag">Netlify</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiencia -->
+  <section id="experiencia" class="section">
+    <h2 class="section-title">Experiencia en Programación</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Scripting para Química Computacional</h3>
+        <div class="meta">Universidad de Cartagena · Grupo de Química Teórica y Fisicoquímica · Marzo 2021 — Septiembre 2023</div>
+        <p>
+          Como estudiante investigador desarrollé scripts en Python para automatizar el
+          análisis de datos computacionales, procesamiento de resultados y visualización de
+          propiedades moleculares. Esta experiencia inicial me permitió desarrollar habilidades
+          de lógica de programación, resolución de problemas y manejo de datos, sentando las
+          bases para mi transición al desarrollo de software.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cursos y Certificaciones -->
+  <section class="section">
+    <h2 class="section-title">Cursos y Certificaciones</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Metodología de la Programación en Sistemas Informáticos</h3>
+        <div class="meta">SENA</div>
+      </div>
+      <div class="timeline-item">
+        <h3>Oracle Next Education — Back-End con Java</h3>
+        <div class="meta">Alura Latam + Oracle</div>
+      </div>
+      <div class="timeline-item">
+        <h3>Machine Learning y Data Science con Python</h3>
+        <div class="meta">Udemy</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Habilidades Blandas -->
+  <section class="section">
+    <h2 class="section-title">Habilidades Blandas</h2>
+    <div class="soft-skills">
+      <span>Aprendizaje autodidacta</span>
+      <span>Resolución de problemas</span>
+      <span>Comunicación asertiva</span>
+      <span>Trabajo en equipo</span>
+      <span>Organización</span>
+      <span>Pensamiento crítico</span>
+      <span>Adaptación rápida</span>
+    </div>
+  </section>
+
+  <!-- Idiomas -->
+  <section class="section">
+    <h2 class="section-title">Idiomas</h2>
+    <div class="lang-list">
+      <div class="lang-item">
+        <span class="name">Español</span>
+        <span class="level">Nativo</span>
+      </div>
+      <div class="lang-item">
+        <span class="name">Inglés</span>
+        <span class="level">Básico</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section">
+    <h2 class="section-title">Contacto</h2>
+    <div class="lang-list">
+      <div class="lang-item">
+        <span class="name">Correo</span>
+        <span class="level"><a href="mailto:Juandavidtc3106@gmail.com">Juandavidtc3106@gmail.com</a></span>
+      </div>
+      <div class="lang-item">
+        <span class="name">Teléfono</span>
+        <span class="level"><a href="tel:3026306469">302 630 6469</a></span>
+      </div>
+      <div class="lang-item">
+        <span class="name">WhatsApp</span>
+        <span class="level"><a href="https://wa.me/573244985462" target="_blank">324 498 5462</a></span>
+      </div>
+      <div class="lang-item">
+        <span class="name">LinkedIn</span>
+        <span class="level"><a href="https://www.linkedin.com/in/juan-david-torres-caceres-b08489202/" target="_blank">juan-david-torres-caceres</a></span>
+      </div>
+      <div class="lang-item">
+        <span class="name">GitHub</span>
+        <span class="level"><a href="https://github.com/juan310619" target="_blank">github.com/juan310619</a></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Referencias -->
+  <section class="section">
+    <h2 class="section-title">Referencias</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Juan Sebastián Castro</h3>
+        <div class="meta">Ingeniero Mecánico — Universidad Nacional de Colombia</div>
+        <p>Teléfono: 300 220 9270</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Juan David Torres C. — Hecho con dedicación</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

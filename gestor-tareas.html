@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Tareas — Juan David Torres</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>📋</text></svg>">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">JDTC <span>— Portfolio</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menú">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html#proyectos">Proyectos</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="project-header">
+  <div class="container">
+    <h1>Gestor de Tareas</h1>
+    <p class="project-date">Enero 2026 — Junio 2026</p>
+    <div class="project-links">
+      <a href="https://github.com/juan310619/Gestor_de_tareas" target="_blank" class="btn-primary">Repositorio en GitHub</a>
+    </div>
+  </div>
+</section>
+
+<div class="container project-content">
+
+  <a href="index.html#proyectos" class="back-link">← Volver a proyectos</a>
+
+  <div class="project-description">
+    <p>
+      <strong>Gestor de Tareas</strong> es una aplicación web full-stack para gestión de proyectos y tareas
+      con un tablero <strong>estilo Kanban</strong> (inspirado en Trello). Permite organizar el flujo de
+      trabajo mediante columnas de estado: <em>pendiente</em>, <em>en progreso</em> y <em>completado</em>,
+      con funcionalidad de arrastrar y soltar para mover tareas entre columnas.
+    </p>
+
+    <h2>Arquitectura</h2>
+    <p>
+      La aplicación sigue una arquitectura de tres capas bien diferenciada. El <strong>backend</strong>
+      expone una API RESTful con más de 25 endpoints, el <strong>frontend</strong> es una SPA
+      (Single Page Application) que consume dicha API, y la <strong>base de datos</strong> relacional
+      almacena toda la información con migraciones controladas.
+    </p>
+
+    <h2>Tecnologías Utilizadas</h2>
+    <div class="project-tech-grid">
+      <div class="project-tech-item">
+        <h4>Python + FastAPI</h4>
+        <p>Backend asíncrono con generación automática de documentación OpenAPI</p>
+      </div>
+      <div class="project-tech-item">
+        <h4>TypeScript + React</h4>
+        <p>Frontend moderno con componentes reutilizables y tipado estático</p>
+      </div>
+      <div class="project-tech-item">
+        <h4>Vite</h4>
+        <p>Empaquetador rápido para desarrollo y builds de producción</p>
+      </div>
+      <div class="project-tech-item">
+        <h4>SQLModel + Alembic</h4>
+        <p>ORM con modelos Pydantic + migraciones de base de datos versionadas</p>
+      </div>
+      <div class="project-tech-item">
+        <h4>PostgreSQL / MySQL</h4>
+        <p>Soporte dual: MySQL en desarrollo local, PostgreSQL en producción (Render)</p>
+      </div>
+      <div class="project-tech-item">
+        <h4>JWT + bcrypt</h4>
+        <p>Autenticación segura con tokens de 30 minutos y hash de contraseñas</p>
+      </div>
+    </div>
+
+    <h2>Características Principales</h2>
+    <ul>
+      <li><strong>Autenticación y autorización</strong> — registro, inicio de sesión con JWT, recuperación de contraseña por correo electrónico con token de 15 minutos</li>
+      <li><strong>CRUD completo</strong> — crear, leer, actualizar y eliminar proyectos y tareas</li>
+      <li><strong>Tablero Kanban drag-and-drop</strong> — arrastrar tareas entre estados (pendiente → en progreso → completado) nativo sin librerías externas</li>
+      <li><strong>Filtros y búsqueda</strong> — filtrar por título, categoría, prioridad, estado, rango de fechas, mes de creación y palabras clave</li>
+      <li><strong>Carga de imágenes</strong> — subir imágenes en las descripciones con validación por tipo MIME, bytes mágicos, y compresión automática con Pillow (máx. 800×800, JPEG calidad 80)</li>
+      <li><strong>Pegado desde portapapeles</strong> — las imágenes también pueden pegarse directamente (Ctrl+V) en el editor de descripciones</li>
+      <li><strong>Rate limiting</strong> — protección contra abusos en endpoints sensibles (5 intentos/min en login, 3/min en registro y recuperación de contraseña)</li>
+      <li><strong>Roles de usuario</strong> — usuarios normales y administradores con capacidades ampliadas (ver todos los usuarios, acceder a cualquier tarea)</li>
+      <li><strong>Seguridad en capas</strong> — whitelist de campos actualizables (protección contra mass assignment), verificación IDOR (un usuario solo ve sus propios recursos), headers de seguridad (HSTS, X-Frame-Options, X-Content-Type-Options, X-XSS-Protection)</li>
+    </ul>
+
+    <h2>API Endpoints</h2>
+    <p>La API expone más de 25 endpoints organizados por recurso:</p>
+    <ul>
+      <li><strong>Autenticación:</strong> login, forgot-password, reset-password</li>
+      <li><strong>Usuarios:</strong> CRUD de usuarios, promoción a admin</li>
+      <li><strong>Proyectos:</strong> CRUD completo con filtro por nombre</li>
+      <li><strong>Tareas:</strong> CRUD completo, búsqueda, filtros por múltiples criterios, carga de imágenes</li>
+    </ul>
+
+    <h2>Galería</h2>
+  </div>
+
+  <div class="project-gallery">
+    <figure>
+      <img src="imagenes/gestor1.webp" alt="Vista del tablero Kanban con tareas en diferentes estados" loading="lazy">
+    </figure>
+    <figure>
+      <img src="imagenes/gestor2.webp" alt="Formulario de creación de tarea con campos detallados" loading="lazy">
+    </figure>
+    <figure>
+      <img src="imagenes/gestor3.webp" alt="Vista general del dashboard de proyectos" loading="lazy">
+    </figure>
+    <figure>
+      <img src="imagenes/gestor4.webp" alt="Modal de detalle de tarea con opciones de edición" loading="lazy">
+    </figure>
+  </div>
+
+  <div class="project-description">
+    <h2>Despliegue</h2>
+    <p>
+      Toda la aplicación está desplegada en <strong>Render</strong>: el backend FastAPI sirve como API
+      y también entrega los archivos estáticos del frontend compilado, todo bajo un mismo dominio,
+      con una base de datos PostgreSQL gestionada.
+      La configuración está automatizada mediante <code>render.yaml</code>.
+    </p>
+
+    <h2>Pruebas</h2>
+    <p>
+      El proyecto incluye pruebas automatizadas con <strong>Jest</strong> y <strong>Supertest</strong>,
+      probando los modelos de datos con configuraciones de cobertura mínima del 80%.
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="container">
+    <p><a href="index.html">← Volver al inicio</a></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

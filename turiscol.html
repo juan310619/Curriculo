@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TurisCol — Juan David Torres</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🌴</text></svg>">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">JDTC <span>— Portfolio</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menú">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html#proyectos">Proyectos</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="project-header">
+  <div class="container">
+    <h1>TurisCol</h1>
+    <p class="project-date">Planificador de Viajes Turísticos en Colombia · 2025 — 2026</p>
+    <div class="project-links">
+      <a href="https://github.com/juan310619/Tursicol" target="_blank" class="btn-primary">Repositorio en GitHub</a>
+    </div>
+  </div>
+</section>
+
+<div class="container project-content">
+
+  <a href="index.html#proyectos" class="back-link">← Volver a proyectos</a>
+
+  <div class="project-description">
+    <p>
+      <strong>TurisCol</strong> es una aplicación web full-stack para planificar viajes turísticos
+      en Colombia. Los usuarios pueden explorar destinos por departamento (Antioquia, Amazonas,
+      Bolívar, Magdalena, entre otros), crear itinerarios personalizados, gestionar reservas y
+      enviar sugerencias de nuevos lugares turísticos con un flujo de aprobación por parte del
+      administrador.
+    </p>
+
+    <h2>Arquitectura</h2>
+    <p>
+      La aplicación sigue un diseño monolítico con separación clara de responsabilidades. El
+      <strong>backend</strong> en Express.js expone una API RESTful, el <strong>frontend</strong>
+      son páginas HTML con JavaScript vanilla y Materialize CSS, y la <strong>base de datos</strong>
+      usa una arquitectura híbrida: SQLite para datos relacionales y NeDB para sugerencias.
+    </p>
+
+    <h2>Tecnologías Utilizadas</h2>
+    <div class="project-tech-grid">
+      <div class="project-tech-item">
+        <h4>Node.js + Express</h4>
+        <p>Servidor web robusto con enrutamiento modular y middleware</p>
+      </div>
+      <div class="project-tech-item">
+        <h4>JavaScript Vanilla</h4>
+        <p>Frontend sin frameworks, con lógica estructurada en módulos y componentes</p>
+      </div>
+      <div class="project-tech-item">
+        <h4>Materialize CSS</h4>
+        <p>Framework de diseño Material Design con tema oscuro personalizado</p>
+      </div>
+      <div class="project-tech-item">
+        <h4>SQLite + NeDB</h4>
+        <p>Persistencia políglota: SQL relacional para usuarios/itinerarios, NoSQL para sugerencias</p>
+      </div>
+      <div class="project-tech-item">
+        <h4>JWT + bcrypt</h4>
+        <p>Autenticación segura con tokens de 30 minutos y contraseñas hasheadas</p>
+      </div>
+      <div class="project-tech-item">
+        <h4>Jest + Supertest</h4>
+        <p>Pruebas unitarias y de integración con cobertura mínima del 80%</p>
+      </div>
+    </div>
+
+    <h2>Características Principales</h2>
+    <ul>
+      <li><strong>Exploración de destinos</strong> — navegar por departamentos colombianos con información detallada, planes turísticos y precios en COP</li>
+      <li><strong>Itinerarios personalizados</strong> — crear, editar y eliminar planes de viaje con fechas de ida y vuelta, número de viajeros, presupuesto y notas</li>
+      <li><strong>Reservas</strong> — gestionar reservas de planes turísticos con historial en el perfil del usuario</li>
+      <li><strong>Sugerencias con aprobación</strong> — los usuarios pueden sugerir nuevos destinos; los administradores los aprueban, editan o rechazan</li>
+      <li><strong>Autenticación completa</strong> — registro, inicio de sesión con JWT, actualización de perfil y cambio de contraseña</li>
+      <li><strong>Roles de usuario</strong> — usuarios normales y administradores con paneles de gestión diferenciados</li>
+      <li><strong>Seguridad</strong> — helmet (headers HTTP seguros), rate limiting (100 solicitudes/15 min por IP), validación con express-validator, CORS configurado</li>
+      <li><strong>Interfaz responsiva</strong> — diseño adaptable a móviles, tablets y escritorio con tema oscuro personalizado</li>
+      <li><strong>Validaciones en cliente y servidor</strong> — fechas no pueden ser pasadas, campos requeridos, formato de email, longitud de contraseña</li>
+    </ul>
+
+    <h2>API Endpoints</h2>
+    <p>La API expone endpoints RESTful para cada recurso:</p>
+    <ul>
+      <li><strong>Auth:</strong> POST /api/auth/login</li>
+      <li><strong>Usuarios:</strong> CRUD completo + cambio de contraseña</li>
+      <li><strong>Itinerarios:</strong> CRUD con alcance por usuario y vista de administrador</li>
+      <li><strong>Sugerencias:</strong> CRUD con flujo de aprobación (solo admin puede aprobar)</li>
+      <li><strong>Reservas:</strong> creación, listado por usuario y eliminación</li>
+    </ul>
+
+    <h2>Galería</h2>
+  </div>
+
+  <div class="project-gallery">
+    <figure>
+      <img src="imagenes/turiscol1.webp" alt="Página principal de TurisCol con exploración de destinos" loading="lazy">
+    </figure>
+    <figure>
+      <img src="imagenes/turiscol2.webp" alt="Vista de detalle de un destino turístico con planes y precios" loading="lazy">
+    </figure>
+    <figure>
+      <img src="imagenes/tursicol3.webp" alt="Formulario de creación de itinerario de viaje" loading="lazy">
+    </figure>
+    <figure>
+      <img src="imagenes/turiscol4.webp" alt="Sección de sugerencias de nuevos destinos turísticos" loading="lazy">
+    </figure>
+    <figure>
+      <img src="imagenes/turiscol5.webp" alt="Perfil de usuario con historial de reservas" loading="lazy">
+    </figure>
+  </div>
+
+  <div class="project-description">
+    <h2>Despliegue</h2>
+    <p>
+      La aplicación está configurada para desplegarse en <strong>Render</strong> mediante el archivo
+      <code>render.yaml</code>. Usa Node.js 20 como runtime y SQLite como base de datos embebida,
+      lo que simplifica el despliegue al no requerir un servicio de base de datos externo.
+    </p>
+
+    <h2>Pruebas</h2>
+    <p>
+      El proyecto incluye suites de pruebas con <strong>Jest</strong> y <strong>Supertest</strong>
+      para los modelos de datos (User, Itinerary, Suggestion) usando SQLite en memoria y NeDB
+      simulado, con umbrales de cobertura del 80% en ramas, funciones, líneas y sentencias.
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="container">
+    <p><a href="index.html">← Volver al inicio</a></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
